@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // 復習
+
+    for (let i = 1; i <= 50; i++){
+      if(i % 10 === 0){
+        console.log(`今[${i}]回ループしました。`)
+      }else if(i % 4 === 0){
+        console.log(`4で割れる数です[${i}]`);
+      }else if(i % 50 === 0){
+        alert('50回カウント終わりました。')
+      }else {
+        console.log(i);
+      }
+    }
+
+    // 過去の回答
+
+    for (let i = 1; i <= 50; i++) {
+
+      console.log(i); 
+
+      if (i % 10 == 0) {
+        console.log('今' + '[' + i + ']' + '回ループしました。');
+      }
+      if (i % 4 == 0) {
+        console.log('4で割れる数です。' + '[' + i + ']');
+      }
+      if (i === 50) {
+        alert('50回カウントが終わりました。');
+      }
+    }
+
+  </script>
+</body>
+</html>
