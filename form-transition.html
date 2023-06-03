@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
+  <title>はじめてのJavaScript</title>
+  <style>
+    input {
+      all: unset; /* プロパティをリセットし、親から自然に継承された場合は継承値、そうでなければ初期値を設定します */
+      transition: width 0.4s, border 0.4s;
+      width: 0;
+    }
+    input.appear {
+      transition: width 0.6s, border 0.6s;
+      border: 1px solid #333;
+      padding: 4px 8px;
+      border-radius: 4px;
+      width: 200px;
+    }
+    #search {
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>#02 アイコンをクリックして入力フォームを開こう</h1>
+  <input type="text" id="input">
+  <i class="bi bi-search" id="search"></i>
+
+  <script>
+    'use strict'; // 厳格モード
+    // .searchの要素を取得
+    const search = document.getElementById('search');
+    // .inputの要素を取得
+    const input = document.getElementById('input');
+    // clickイベント.apperをinputに追加
+    search.addEventListener('click', () => {
+      input.classList.add('appear');
+      // 入力フォームにフォーカスするメソッド
+      input.focus();
+    });
+
+    input.addEventListener('blur', () => { // blurとはフォーカスが外れた時の意味
+      // .appearを削除
+      input.classList.remove('appear');
+    });
+  </script>
+</body>
+</html>
